@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshFruits - Premium Online Fruit Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍎</span>
+                <span class="logo-text">FreshFruits</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Fresh & Organic<br>Fruits Delivered<br>To Your Door</h1>
+                    <p class="hero-subtitle">Discover the finest selection of premium fruits from around the world. Farm-fresh quality, unbeatable prices.</p>
+                    <a href="products.html" class="btn btn-primary">Shop Now</a>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-fruits">
+                        <span class="fruit floating-1">🍊</span>
+                        <span class="fruit floating-2">🍋</span>
+                        <span class="fruit floating-3">🍇</span>
+                        <span class="fruit floating-4">🍓</span>
+                        <span class="fruit floating-5">🍑</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <span class="feature-icon">🚚</span>
+                    <h3>Free Delivery</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🌱</span>
+                    <h3>100% Organic</h3>
+                    <p>Certified organic produce</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">💯</span>
+                    <h3>Fresh Guarantee</h3>
+                    <p>Money-back freshness</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <h3>Easy Ordering</h3>
+                    <p>Simple & convenient</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Our most popular picks this season</p>
+                <div class="products-grid" id="featured-products">
+                    <!-- Products loaded via JavaScript -->
+                </div>
+                <div class="text-center">
+                    <a href="products.html" class="btn btn-secondary">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-grid">
+                    <a href="products.html?category=citrus" class="category">
+                        <span class="category-icon">🍊</span>
+                        <h3>Citrus</h3>
+                        <p>Oranges, Lemons, Limes</p>
+                    </a>
+                    <a href="products.html?category=berries" class="category">
+                        <span class="category-icon">🍓</span>
+                        <h3>Berries</h3>
+                        <p>Strawberries, Blueberries</p>
+                    </a>
+                    <a href="products.html?category=tropical" class="category">
+                        <span class="category-icon">🥭</span>
+                        <h3>Tropical</h3>
+                        <p>Mangoes, Pineapples</p>
+                    </a>
+                    <a href="products.html?category=apples" class="category">
+                        <span class="category-icon">🍎</span>
+                        <h3>Apples</h3>
+                        <p>Red, Green, Fuji</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The freshest fruits I've ever ordered online! Delivery was fast and everything arrived in perfect condition."</p>
+                        <div class="customer">
+                            <span class="customer-name">Sarah Johnson</span>
+                            <span class="customer-location">New York</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Amazing quality and great prices. My family loves the organic options. Highly recommend!"</p>
+                        <div class="customer">
+                            <span class="customer-name">Michael Chen</span>
+                            <span class="customer-location">Los Angeles</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Best online fruit store I've found. The variety is incredible and the customer service is top-notch."</p>
+                        <div class="customer">
+                            <span class="customer-name">Emily Davis</span>
+                            <span class="customer-location">Chicago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get exclusive deals, seasonal recipes, and fresh updates delivered to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>🍎 FreshFruits</h3>
+                    <p>Bringing the freshest fruits from farms to your table since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Shop</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Track Order</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📍 123 Fruit Street, Fresh City</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ hello@freshfruits.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreshFruits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // Load featured products
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

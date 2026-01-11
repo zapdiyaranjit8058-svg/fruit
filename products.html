@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - FreshFruits</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍎</span>
+                <span class="logo-text">FreshFruits</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" onclick="window.location.href='cart.html'">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Products</h1>
+                <p>Fresh, organic fruits delivered to your door</p>
+            </div>
+        </section>
+
+        <section class="shop-content">
+            <div class="container">
+                <div class="shop-layout">
+                    <aside class="sidebar">
+                        <div class="filter-section">
+                            <h3>Categories</h3>
+                            <ul class="filter-list">
+                                <li><a href="#" class="filter-link active" data-category="all">All Fruits</a></li>
+                                <li><a href="#" class="filter-link" data-category="citrus">🍊 Citrus</a></li>
+                                <li><a href="#" class="filter-link" data-category="berries">🍓 Berries</a></li>
+                                <li><a href="#" class="filter-link" data-category="tropical">🥭 Tropical</a></li>
+                                <li><a href="#" class="filter-link" data-category="apples">🍎 Apples</a></li>
+                                <li><a href="#" class="filter-link" data-category="melons">🍈 Melons</a></li>
+                                <li><a href="#" class="filter-link" data-category="stone-fruits">🍑 Stone Fruits</a></li>
+                            </ul>
+                        </div>
+                        <div class="filter-section">
+                            <h3>Price Range</h3>
+                            <div class="price-filters">
+                                <label class="price-filter">
+                                    <input type="radio" name="price" value="all" checked> All Prices
+                                </label>
+                                <label class="price-filter">
+                                    <input type="radio" name="price" value="under5"> Under $5
+                                </label>
+                                <label class="price-filter">
+                                    <input type="radio" name="price" value="5-10"> $5 - $10
+                                </label>
+                                <label class="price-filter">
+                                    <input type="radio" name="price" value="over10"> Over $10
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-section">
+                            <h3>Availability</h3>
+                            <label class="checkbox-filter">
+                                <input type="checkbox" id="in-stock"> In Stock Only
+                            </label>
+                        </div>
+                    </aside>
+                    
+                    <div class="products-section">
+                        <div class="products-header">
+                            <div class="results-count">
+                                <span id="results-count">0</span> products found
+                            </div>
+                            <div class="sort-options">
+                                <label for="sort">Sort by:</label>
+                                <select id="sort">
+                                    <option value="default">Default</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="name">Name: A-Z</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="products-grid" id="all-products">
+                            <!-- Products loaded via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>🍎 FreshFruits</h3>
+                    <p>Bringing the freshest fruits from farms to your table since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Shop</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Track Order</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📍 123 Fruit Street, Fresh City</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ hello@freshfruits.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreshFruits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // Load all products
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAllProducts();
+            updateCartCount();
+            setupFilters();
+        });
+    </script>
+</body>
+</html>

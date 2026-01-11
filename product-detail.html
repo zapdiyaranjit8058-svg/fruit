@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product - FreshFruits</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍎</span>
+                <span class="logo-text">FreshFruits</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" onclick="window.location.href='cart.html'">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="products.html">Shop</a>
+                    <span>/</span>
+                    <span id="breadcrumb-name">Product</span>
+                </nav>
+            </div>
+        </section>
+
+        <section class="product-detail">
+            <div class="container">
+                <div class="product-detail-layout">
+                    <div class="product-gallery">
+                        <div class="main-image" id="main-image">
+                            <span class="product-emoji" id="product-emoji">🍎</span>
+                        </div>
+                        <div class="thumbnails">
+                            <button class="thumbnail active" data-image="🍎">🍎</button>
+                            <button class="thumbnail" data-image="🍏">🍏</button>
+                            <button class="thumbnail" data-image="🍎">🍎</button>
+                            <button class="thumbnail" data-image="🍎">🍎</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-info">
+                        <span class="product-badge" id="product-badge">Organic</span>
+                        <h1 class="product-title" id="product-title">Organic Red Apples</h1>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(4.9 / 5)</span>
+                            <span class="reviews">124 reviews</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price" id="current-price">$4.99</span>
+                            <span class="unit">/ lb</span>
+                        </div>
+                        <p class="product-description" id="product-description">
+                            Premium organic red apples grown without pesticides or synthetic fertilizers. 
+                            Crisp, sweet, and bursting with flavor. Perfect for snacking, baking, or adding to your favorite recipes.
+                        </p>
+                        
+                        <div class="product-benefits">
+                            <h3>Health Benefits</h3>
+                            <ul>
+                                <li>Rich in fiber and antioxidants</li>
+                                <li>Supports heart health</li>
+                                <li>May help regulate blood sugar</li>
+                                <li>Boosts immune system</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-options">
+                            <div class="option-group">
+                                <label>Size</label>
+                                <div class="size-options">
+                                    <label class="size-option">
+                                        <input type="radio" name="size" value="small" checked>
+                                        <span>Small (1 lb)</span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="size" value="medium">
+                                        <span>Medium (2 lb)</span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="size" value="large">
+                                        <span>Large (3 lb)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="option-group">
+                                <label>Quantity</label>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">−</button>
+                                    <input type="number" class="qty-input" value="1" min="1" max="50">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-large" id="add-to-cart">
+                                🛒 Add to Cart
+                            </button>
+                            <button class="btn btn-secondary btn-large" id="buy-now">
+                                Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <span class="meta-icon">🚚</span>
+                                <span>Free delivery on orders over $50</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">↩️</span>
+                                <span>30-day freshness guarantee</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">📦</span>
+                                <span>Freshly packed same day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab active" data-tab="description">Description</button>
+                    <button class="tab" data-tab="nutrition">Nutrition</button>
+                    <button class="tab" data-tab="reviews">Reviews</button>
+                </div>
+                <div class="tab-content active" id="description">
+                    <h3>Product Description</h3>
+                    <p>Our organic red apples are carefully selected from premium orchards where they're grown using sustainable farming practices. Each apple is hand-picked at peak ripeness to ensure maximum flavor and nutrition.</p>
+                    <p>These apples feature a beautiful deep red color, crisp texture, and the perfect balance of sweet and tart flavors. They're ideal for fresh eating, but also excellent for baking, making applesauce, or adding to salads.</p>
+                    <h4>Storage Tips</h4>
+                    <p>Store apples in the refrigerator at 32-40°F. They can be stored for up to 6 weeks in the crisper drawer. To prevent bruising, keep them away from bananas and other ethylene-producing fruits.</p>
+                </div>
+                <div class="tab-content" id="nutrition">
+                    <h3>Nutrition Facts</h3>
+                    <p>Serving Size: 1 medium apple (182g)</p>
+                    <table class="nutrition-table">
+                        <tr>
+                            <td>Calories</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>Total Fat</td>
+                            <td>0.3g</td>
+                        </tr>
+                        <tr>
+                            <td>Sodium</td>
+                            <td>2mg</td>
+                        </tr>
+                        <tr>
+                            <td>Total Carbohydrate</td>
+                            <td>25g</td>
+                        </tr>
+                        <tr>
+                            <td>Dietary Fiber</td>
+                            <td>4.4g</td>
+                        </tr>
+                        <tr>
+                            <td> Sugars</td>
+                            <td>19g</td>
+                        </tr>
+                        <tr>
+                            <td>Protein</td>
+                            <td>0.5g</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-content" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="reviewer-name">John D.</span>
+                                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p>"Absolutely delicious! The best apples I've ever bought online. So fresh and crisp!"</p>
+                            <span class="review-date">December 2024</span>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="reviewer-name">Maria S.</span>
+                                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p>"My kids love these! Great quality and fast delivery. Will definitely order again."</p>
+                            <span class="review-date">November 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="products-grid" id="related-products">
+                    <!-- Related products loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>🍎 FreshFruits</h3>
+                    <p>Bringing the freshest fruits from farms to your table since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Shop</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Track Order</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📍 123 Fruit Street, Fresh City</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ hello@freshfruits.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreshFruits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // Load product details
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProductDetail();
+            updateCartCount();
+            setupTabs();
+            setupQuantitySelector();
+        });
+    </script>
+</body>
+</html>
